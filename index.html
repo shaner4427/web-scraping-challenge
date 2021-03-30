@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mars</h1>
+      <p>It's Mars</p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+    </div>
+    
+  <div class="row">
+  <div class="col-md-12">
+    <h2>{{ mars_data.nasa_title }}:</h2>
+    <h3>{{ mars_data.nasa_teaser }}</h3>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <img src="{{ mars_data.featured_image_url }}" alt="Mars">
+    </div>
+    <div class="col-md-4">
+      {{ mars_data.facts_table | safe }}
+    </div>
+
+    <div class="row">
+
+      {% for hemi in mars_data.hemispheres}
+      <div class="col-md-3">
+        <h4>{{ hemisphere.title }}</h4>
+
+        
+</body>
+
+</html>
