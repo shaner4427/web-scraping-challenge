@@ -1,6 +1,10 @@
 from flask import Flask, render_template, redirect
+from flask import Flask 
+from flask import request
 from flask_pymongo import PyMongo
 import scrape_mars
+from pymongo import MongoClient
+import pymongo
 
 # Create an instance of Flask
 app = Flask(__name__)
