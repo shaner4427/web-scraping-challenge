@@ -76,3 +76,7 @@ def scrape_mars():
         "fact_tables": fact_tables,
         "hemispheres": hemispheres
     }
+
+    browser.quit()
+
+    return mars_data

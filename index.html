@@ -19,24 +19,25 @@
     
   <div class="row">
   <div class="col-md-12">
-    <h2>{{ mars_data.nasa_title }}:</h2>
-    <h3>{{ mars_data.nasa_teaser }}</h3>
+    <h2>{{mars_data.nasa_title}}:</h2>
+    <h3>{{mars_data.nasa_teaser}}</h3>
+    <p>{{mars_data.paragraph}}</p>
   </div>
   </div>
 
   <div class="row">
     <div class="col-md-8">
-      <img src="{{ mars_data.featured_image_url }}" alt="Mars">
+      <img src="{{mars_data.featured_image_url}}" alt="Mars">
     </div>
     <div class="col-md-4">
-      {{ mars_data.facts_table | safe }}
+      <p>{{mars_data.fact_tables | safe}}</p>
     </div>
 
     <div class="row">
 
       {% for hemi in mars_data.hemispheres}
       <div class="col-md-3">
-        <h4>{{ hemisphere.title }}</h4>
+        <h4>{{hemispheres.title}}</h4>
       </div>
     </div>
   </div>
